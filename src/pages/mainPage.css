@@ -1,0 +1,70 @@
+.icon-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.icon {
+    height: auto;
+    max-width: 75%;
+    scale: 50%;
+    transition: transform 0.4s ease-out, filter 0.4s ease-out;
+}
+
+.scroll-space {
+    height: 200vh;
+    background-color: #7091E6;
+  }
+
+  .white-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 2s ease-in-out; 
+    pointer-events: none; 
+  }
+
+  /* Rainbow Glow Effect Behind the Logo */
+.rainbow-glow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    animation: rainbowPulse 3s infinite alternate, rainbowMove 6s infinite linear;
+    filter: blur(80px);
+  }
+  
+  /* Rainbow Color Pulsation */
+  @keyframes rainbowPulse {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      filter: blur(50px);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1.3);
+      filter: blur(120px);
+    }
+  }
+  
+  /* Slightly Moving Rainbow Effect */
+  @keyframes rainbowMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
