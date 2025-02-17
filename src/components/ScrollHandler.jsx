@@ -9,8 +9,9 @@ function ScrollHandler({ onRemoveIntro }) {
         const mainPageTop = mainPage.offsetTop;
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-        if (scrollTop >= mainPageTop - 50) { // If the user scrolled past IntroPage
+        if (scrollTop >= mainPageTop) { // If the user scrolled past IntroPage
           onRemoveIntro(); // Remove IntroPage
+          
         }
       }
     };

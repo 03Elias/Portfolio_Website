@@ -1,26 +1,41 @@
 body {
-  background-color: #161616;
+  background-color: #3d82d1;
 }
+
+
 
 .intro-page-container {
   height: 100vh;
+  z-index: 1;
 }
 
 .icon-container {
+  height: auto;
   position: fixed;
+  flex-direction: column;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 10vh;
 }
 
 .icon {
-  animation: scaleUp 1s ease-in-out forwards;
+  animation: scaleUpEGLogo 1s ease-in-out forwards;
 }
 
-@keyframes scaleUp {
+.arrow {
+  position: absolute;
+  margin-top: 65vh;
+  scale: 0.23;
+  animation: 
+    scaleUpArrowLogo 1s ease-in-out forwards, 
+    upDownArrowLogo 1s ease-in-out 2s infinite;
+}
+
+@keyframes scaleUpEGLogo {
   from {
     transform: scale(0);
   }
@@ -28,3 +43,20 @@ body {
     transform: scale(0.5);
   }
 }
+
+@keyframes scaleUpArrowLogo {
+  from {
+
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes upDownArrowLogo {  
+  0% { transform: translateY(6vh); }   
+  50% { transform: translateY(-6vh); } 
+  100% { transform: translateY(6vh); } 
+}
+

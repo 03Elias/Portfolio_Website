@@ -1,6 +1,58 @@
 .main-page-container {
+    overflow: hidden;
+    position: relative;
     height: 100vh;
     width: 100vw;
-    background-color: #efeff0;
+    top:0;
+    background-color: rgba(255, 255, 255);
+    z-index: 2;
+}
+
+.anim-EG-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.anim-EG {
+    position: absolute;
+    left: 50%;
+    top: 100vh; 
+    transform: translate(-50%, 0); 
+    animation: introPopUp 2s ease-in-out forwards;
+}
+
+.anim-E {
+    animation: splitEG 1s ease-in-out 2s forwards;
+}
+
+
+.anim-Lias, .anim-Aghlasian {
+    animation: introPopUpRest 2s ease-in-out 3s forwards;
+    color: #1A4D8F;
+}
+
+.anim-E, .anim-G {
+   
+    color: #008CFF;
+}
+
+
+
+@keyframes introPopUp {
+    from { top: 100vh; } 
+    to { top: 50%; transform: translate(-50%, -50%); }
+}
+
+@keyframes splitEG {
+    from {margin-right: 0vw;}
+    to {margin-right: 15vw;}
+}
+
+@keyframes introPopUpRest {
+    from { top: 100vh; } 
+    to { top: 50%; transform: translate(-50%, -50%); }
 }
 
