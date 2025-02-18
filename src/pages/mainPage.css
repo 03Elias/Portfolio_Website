@@ -8,31 +8,49 @@
     z-index: 2;
 }
 
+
+
 .anim-EG-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap:0.5vw;
 }
-
 
 .anim-EG {
     position: absolute;
-    left: 50%;
-    top: 100vh; 
-    transform: translate(-50%, 0); 
+    display: flex;  
+    gap: 0;
+    justify-content: center;
+    align-items: center; 
+    transform: translate(-50%, 100vh);
     animation: introPopUp 2s ease-in-out forwards;
 }
 
 .anim-E {
-    animation: splitEG 1s ease-in-out 2s forwards;
+    animation: splitE 1s ease-in-out 2s forwards;
+}
+
+.anim-G {
+    animation: splitG 1s ease-in-out 2s forwards;
 }
 
 
+.anim-Aghlasian {
+    margin-left: 2vw;
+}
+
 .anim-Lias, .anim-Aghlasian {
+    transform: translateY(100vh);
     animation: introPopUpRest 2s ease-in-out 3s forwards;
     color: #1A4D8F;
 }
+
+
+
 
 .anim-E, .anim-G {
    
@@ -41,18 +59,28 @@
 
 
 
+
+
 @keyframes introPopUp {
-    from { top: 100vh; } 
-    to { top: 50%; transform: translate(-50%, -50%); }
+    from { transform: translateY(100vh); } 
+    to { transform: translateY(0); }
 }
 
-@keyframes splitEG {
-    from {margin-right: 0vw;}
-    to {margin-right: 15vw;}
+
+@keyframes splitE {
+    from { transform: translateX(0); }
+    to { transform: translateX(-2.5vw); }
 }
+
+
+@keyframes splitG {
+    from { transform: translateX(0); }
+    to { transform: translateX(4vw); }
+}
+
 
 @keyframes introPopUpRest {
-    from { top: 100vh; } 
-    to { top: 50%; transform: translate(-50%, -50%); }
+    from { transform: translateY(100vh); }
+    to { transform: translateY(0); }
 }
 
