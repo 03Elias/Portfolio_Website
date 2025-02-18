@@ -3,16 +3,17 @@ import IntroPage from "./pages/IntroPage";
 import MainPage from "./pages/MainPage";
 import ScrollHandler from "./components/ScrollHandler";
 
+
 function App() {
   const [showMainPageOnly, setShowMainPageOnly] = useState(false);
-
   return (
     <>
-      {!showMainPageOnly && <ScrollHandler onRemoveIntro={() => setShowMainPageOnly(true)} />}
-      
+  
+      {!showMainPageOnly && <ScrollHandler onRemoveIntro={() => 
+        setShowMainPageOnly(true)} />}
       {showMainPageOnly ? (
         <div id="main-page">
-          <MainPage />
+          <MainPage showMainPageOnly={true}/>
         </div>
       ) : (
         <>
@@ -20,8 +21,9 @@ function App() {
             <IntroPage />
           </div>
           <div id="main-page">
-            <MainPage />
+            <MainPage showMainPageOnly={false}/>
           </div>
+         
         </>
       )}
     </>

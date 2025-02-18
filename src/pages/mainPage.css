@@ -9,6 +9,23 @@
 }
 
 
+.mainPage-logo-container {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: inline-block;
+    cursor: pointer;
+    transform: scale(0);
+    animation: introPopUpLogo 1.5s ease-in-out 4s forwards;
+}
+
+.icon-mainPage {
+    transform: scale(1.2);
+    width: 80px;
+    height: auto; 
+}
+
+
 .anim-EG-container {
     position: absolute;
     top: 50%;
@@ -45,7 +62,11 @@
     color: #1A4D8F;
 }
 
-/* 🎬 Animations */
+@keyframes introPopUpLogo {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
 @keyframes introPopUp {
     from { transform: translateY(100vh); } 
     to { transform: translateY(0); }
