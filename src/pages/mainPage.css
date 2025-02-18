@@ -69,13 +69,13 @@
 
 @keyframes splitE {
     from { transform: translateX(0); }
-    to { transform: translateX(-2.5vw); }
+    to { transform: translateX(-0.7em); }
 }
 
 
 @keyframes splitG {
     from { transform: translateX(0); }
-    to { transform: translateX(4vw); }
+    to { transform: translateX(1em); }
 }
 
 
