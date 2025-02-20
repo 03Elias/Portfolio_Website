@@ -16,9 +16,97 @@
     grid-template-columns: repeat(3, 1fr);
     padding: 1em;
     gap: 10em;
+    justify-content: center;
 
 }
 
 .card {
+    
+    width: 15em; 
+    height: 20em; 
+    border: 2px solid #1A4D8F; 
+    border-radius: 15px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
     text-align: center;
+    padding: 1em;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer; 
+    
+}
+
+.first {
+    background-color: #0A1F3D;
+}
+
+.firstParagraph {
+    margin-top: 1em;
+    color: aliceblue;
+}
+
+.second {
+   background-color: #DFFDE0; 
+}
+
+.secondParagraph {
+    padding-top: 3em;
+    color: #3D2C8D;
+}
+
+.thirdParagraph {
+    padding-bottom: 2em;
+}
+
+
+.uniu-logo {
+    margin-top: 2em;
+    transform: scale(2);
+}
+
+.kth-connect-logo {
+    transform: scale(1.5);
+}
+
+.algo-logo {
+    width: 100%;
+    height: auto;
+    
+}
+
+.githubButtonContainer {
+    position: absolute;  
+    left: 50%;  
+    bottom: 2em; 
+    transform: translateX(-50%);  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.githubButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A4D8F; 
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 2em; 
+}
+
+.githubButton:hover {
+    transform: scale(1.1);
+    background-color: #008CFF; 
+}
+
+.card:hover {
+    transform: scale(1.05); 
 }
