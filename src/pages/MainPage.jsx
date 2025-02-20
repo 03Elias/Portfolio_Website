@@ -3,7 +3,6 @@ import EG_Logo from "../assets/EG.png"
 import MainMenu from "../components/MainMenu";
 
 function MainPage({ showMainPageOnly }) {
-
   
 
   return (
