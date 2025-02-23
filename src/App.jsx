@@ -1,17 +1,20 @@
 import { useState, useEffect } from "react";
 import IntroPage from "./pages/IntroPage";
 import MainPage from "./pages/MainPage";
-import AboutMePage from "./pages/AboutMePage";
+import ProjectPage from "./pages/ProjectPage";
+import ContactPage from "./pages/ContactPage";
 import ScrollHandler from "./components/ScrollHandler";
 
 function App() {
   const [showMainPageOnly, setShowMainPageOnly] = useState(false);
   const [showAboutMe, setShowAboutMe] = useState(false);
+  const [showContact, setContact] = useState(false);
 
   useEffect(() => {
     if (showMainPageOnly) {
       const timer = setTimeout(() => {
         setShowAboutMe(true);
+        setContact(true);
       }, 5500);
 
       return () => clearTimeout(timer);
@@ -24,7 +27,9 @@ function App() {
       {showMainPageOnly ? (
         <div id="main-page">
           <MainPage showMainPageOnly={true} />
-          {showAboutMe && <AboutMePage />}
+          {showAboutMe && <ProjectPage />}
+          {showContact && <ContactPage />}
+
         </div>
       ) : (
         <>

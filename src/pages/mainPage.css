@@ -10,7 +10,7 @@
 
 
 .mainPage-logo-container {
-    position: absolute;
+    position: fixed;
     top: 2rem;
     left: 2rem;
     display: inline-block;

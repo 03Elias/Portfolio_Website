@@ -1,13 +1,15 @@
-import './AboutMePage.css'
+import { useEffect, useRef } from "react";
+import './ProjectPage.css'
 import KTH_Logo from "../assets/kth-connect.svg"
 import UNIU from "../assets/UGGLU.svg"
 import Algorithm from "../assets/algoData.svg"
 
 function AboutMePage () {
 
+
     return (
         <>
-            <div className="aboutMe-page-container">
+            <div id="project-page" className="project-page-container">
 
                 <div className="cardHolder">
                     <a href="https://github.com/danljungstrom/KTH-Connect" target="_blank" rel="noopener noreferrer">

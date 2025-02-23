@@ -1,4 +1,8 @@
-.aboutMe-page-container {
+
+
+
+
+.project-page-container {
     display: flex;
     overflow: hidden;
     position: relative;
@@ -8,7 +12,6 @@
     width: 100vw;
     top: 0;
     background-color: rgba(255, 255, 255);
-    z-index: 2;
 }
 
 .cardHolder {
