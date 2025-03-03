@@ -62,6 +62,19 @@
     color: #1A4D8F;
 }
 
+.typing-effect {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60vh;
+    transform: scale(1.25);
+    background: linear-gradient(to right, #008CFF, #1A4D8F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
 @keyframes introPopUpLogo {
     from {transform: scale(0);}
     to {transform: scale(1);}
