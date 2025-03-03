@@ -6,6 +6,24 @@ import DisableZoom from '../components/disableZoom';
 
 function IntroPage() {
 
+
+  useEffect(() => {
+   
+    const logo = document.querySelector(".mainPage-logo-container");
+    
+  
+    if (logo) {
+      logo.style.display = "none";
+    }
+
+    
+    return () => {
+      if (logo) {
+        logo.style.display = "block"; 
+      }
+    };
+  }, []);
+
   return (
     <>
       <DisableZoom/>

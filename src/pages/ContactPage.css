@@ -21,3 +21,10 @@
     transform: scale(1.2);
    
 }
+
+.email-container:hover, 
+.Linkedin-container:hover, 
+.gitHub-container:hover {
+  transform: scale(1.1); 
+  transition: 0.3s ease-in-out; 
+}
