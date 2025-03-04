@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import "./MainPage.css";
 import EG_Logo from "../assets/EG.png";
+import profilPic from "../assets/profilPic.jpeg";
 import MainMenu from "../components/MainMenu";
 
 function MainPage({ showMainPageOnly }) {
-  const roles = ["Web Developer", "Software Developer", "IT Recruiter", "Problem Solver"];
+  const roles = ["Web Developer", "Software Developer", "IT Recruiter", "Problem Solver", "Team Leader"];
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
@@ -54,6 +55,10 @@ function MainPage({ showMainPageOnly }) {
             G<span className="anim-Aghlasian">aghlasian</span>
           </h1>
         </div>
+          <div className="profile-image-container">
+              <img className="profile-image" src={profilPic} alt="Elias Gaghlasian" />
+          </div>
+
 
         
         {showTypingEffect && <p className="typing-effect">{text}<span className="cursor">|</span></p>}

@@ -74,6 +74,52 @@
     -webkit-text-fill-color: transparent;
 
 }
+/* Make the whole text container interactive */
+.anim-EG-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 0;
+    z-index: 5;
+    cursor: pointer; 
+}
+
+/* Make the whole name fade away on hover */
+.anim-EG-container:hover {
+    opacity: 0;
+}
+
+/* Image container (initially hidden) */
+.profile-image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: 3; 
+}
+
+/* Show the image when hovering over the name */
+.anim-EG-container:hover + .profile-image-container {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Image styling */
+.profile-image {
+    width: 180px; /* Adjust for better visibility */
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #008CFF; /* Circular border */
+    padding: 10px; /* Creates a space between border and image */
+    background-color: white; /* Ensures contrast */
+}
+
+
 
 @keyframes introPopUpLogo {
     from {transform: scale(0);}
