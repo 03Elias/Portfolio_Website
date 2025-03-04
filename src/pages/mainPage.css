@@ -84,6 +84,7 @@
     gap: 0;
     z-index: 5;
     cursor: pointer; 
+    pointer-events: none;
 }
 
 /* Make the whole name fade away on hover */
@@ -100,10 +101,15 @@
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
     z-index: 3; 
+    pointer-events: none;
+}
+.hover-enabled {
+    pointer-events: auto; /* Enable hover */
 }
 
+
 /* Show the image when hovering over the name */
-.anim-EG-container:hover + .profile-image-container {
+.anim-EG-container:hover + .profile-image-container.hover-enabled {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1.1);
 }

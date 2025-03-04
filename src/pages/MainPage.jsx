@@ -11,6 +11,16 @@ function MainPage({ showMainPageOnly }) {
   const [subIndex, setSubIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [showTypingEffect, setShowTypingEffect] = useState(false);
+  const [isEGAnimationDone, setIsEGAnimationDone] = useState(false);
+
+  useEffect(() => {
+    const animationTimer = setTimeout(() => {
+      setIsEGAnimationDone(true); 
+    }, 4500); 
+  
+    return () => clearTimeout(animationTimer); 
+  }, []);
+  
 
   
   useEffect(() => {
@@ -47,7 +57,7 @@ function MainPage({ showMainPageOnly }) {
         <div className="mainPage-logo-container" onClick={() => window.location.href = "/"}>
           <img className="icon-mainPage" src={EG_Logo} alt="EG logo" />
         </div>
-        <div className="anim-EG-container">
+        <div className={`anim-EG-container ${isEGAnimationDone ? "hover-enabled" : ""}`}>
           <h1 className="anim-E">
             E<span className="anim-Lias">lias</span>
           </h1>
@@ -55,7 +65,7 @@ function MainPage({ showMainPageOnly }) {
             G<span className="anim-Aghlasian">aghlasian</span>
           </h1>
         </div>
-          <div className="profile-image-container">
+          <div className={`profile-image-container ${isEGAnimationDone ? "hover-enabled" : ""}`}>
               <img className="profile-image" src={profilPic} alt="Elias Gaghlasian" />
           </div>
 
