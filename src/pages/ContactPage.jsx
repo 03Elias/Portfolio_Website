@@ -27,6 +27,10 @@ function ContactPage () {
                             <p>🖥️ <a href="https://github.com/03Elias" target="_blank" rel="noopener noreferrer">https://github.com/03Elias</a></p>
                         </div>
 
+                        <div className="resume-container">
+                                <p>📄 <a href="/CV.pdf" download="Elias_Gaghlasian_Resume.pdf">My Resume</a></p>
+                        </div>
+
                 </div>
 
             </div>

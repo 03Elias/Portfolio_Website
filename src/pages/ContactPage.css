@@ -24,7 +24,9 @@
 
 .email-container:hover, 
 .Linkedin-container:hover, 
-.gitHub-container:hover {
+.gitHub-container:hover,
+.resume-container:hover
+ {
   transform: scale(1.1); 
   transition: 0.3s ease-in-out; 
 }
