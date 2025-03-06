@@ -74,7 +74,7 @@
     -webkit-text-fill-color: transparent;
 
 }
-/* Make the whole text container interactive */
+
 .anim-EG-container {
     position: absolute;
     top: 50%;
@@ -85,14 +85,23 @@
     z-index: 5;
     cursor: pointer; 
     pointer-events: none;
+    animation: pulse 2s infinite alternate;
 }
 
-/* Make the whole name fade away on hover */
+@keyframes pulse {
+    0% { text-shadow: 0 0 5px rgba(30, 144, 255, 0.3); }
+    50% { text-shadow: 0 0 10px rgba(30, 144, 255, 0.6); }
+    100% { text-shadow: 0 0 5px rgba(30, 144, 255, 0.3); }
+}
+
+
+
 .anim-EG-container:hover {
     opacity: 0;
+    animation: none;
 }
 
-/* Image container (initially hidden) */
+
 .profile-image-container {
     position: absolute;
     top: 50%;
@@ -104,25 +113,25 @@
     pointer-events: none;
 }
 .hover-enabled {
-    pointer-events: auto; /* Enable hover */
+    pointer-events: auto; 
 }
 
 
-/* Show the image when hovering over the name */
+
 .anim-EG-container:hover + .profile-image-container.hover-enabled {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* Image styling */
+
 .profile-image {
-    width: 180px; /* Adjust for better visibility */
+    width: 180px; 
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #008CFF; /* Circular border */
-    padding: 10px; /* Creates a space between border and image */
-    background-color: white; /* Ensures contrast */
+    border: 3px solid #008CFF; 
+    padding: 10px;
+    background-color: white; 
 }
 
 
@@ -147,3 +156,4 @@
     from { transform: translateY(100%); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+
