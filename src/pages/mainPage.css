@@ -157,3 +157,15 @@
     to { transform: translateY(0); opacity: 1; }
 }
 
+@media (max-width: 768px) {
+    .anim-EG-container {
+        font-size: 60%; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .anim-EG-container {
+        font-size: 47%; 
+    }
+}

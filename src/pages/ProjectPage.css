@@ -119,3 +119,30 @@
 .card:hover {
     transform: scale(1.05); 
 }
+
+
+/*Needs fixing*/
+@media (max-width: 768px) {
+    .cardHolder {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 0.00001em; 
+       
+    }
+
+    .card {
+        width: 85%; 
+        max-width: 18em;
+        height: 50%; 
+        transform: scale(0.7); 
+        padding: 1em; 
+    }
+
+    .githubButtonContainer {
+        margin-right: 1vw;
+    }
+   
+
+  
+}

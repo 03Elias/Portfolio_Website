@@ -39,3 +39,36 @@
     from {transform: scale(0);}
     to {transform: scale(1)}
 }
+
+
+@media (max-width: 768px) {
+    .icon-mainPage {
+        display: none;
+    }
+    .menu-container {
+        top: 2.5vh;
+        height: 45px; /* Adjust navbar height */
+    }
+
+    .menu-container ul {
+        gap: 0.5rem; /* Reduce spacing between items */
+        transform: scale(1.2);
+    }
+
+    .menu-container ul li {
+        font-size: 0.9rem; /* Smaller font for better fit */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-container {
+        top: 2.5vh;
+        height: 40px; 
+       
+    }
+
+    .menu-container ul {
+        transform: scale(1.2);
+        gap: 0.7rem;
+    }
+}
