@@ -1,0 +1,82 @@
+.skills-page {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    grid-template-rows: auto; /* Automatically adjusts row height */
+    gap: 7em;
+    padding: 4.5em 1.5em;
+    justify-content: center;
+    background-color: white;
+
+    justify-content: center; /* Centers the grid horizontally */
+    align-items: center; /* Centers the grid vertically */
+    width: fit-content; /* Makes sure the grid is centered */
+    margin: 0 auto; /* Centers it properly */
+}
+
+#main-page {
+    background-color: white;
+}
+
+/* Styling for the skill cards */
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20vw; 
+    height: 25vh;
+    background: white;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+
+/* Image inside the card */
+.skill-container img {
+    width: 50px;
+    height: 50px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Initially hide the text */
+.skill-container .skill-text {
+    display: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white; /* White text when hovered */
+    text-align: center;
+}
+
+/* Hover Effect */
+.skill-container:hover {
+    background: #3498db; /* Light blue */
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 51, 102, 0.2);
+}
+
+/* Show text, hide image when hovered */
+.skill-container:hover img {
+    display: none;
+}
+
+.skill-container:hover .skill-text {
+    display: block;
+}
+
+/* Responsive for Mobile - Stacks into 2 columns on smaller screens */
+@media (max-width: 900px) {
+    .skills-page {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    }
+}
+
+/* Mobile: Stack into 1 column */
+@media (max-width: 600px) {
+    .skills-page {
+        grid-template-columns: repeat(1, 1fr); /* 1 per row */
+    }
+}
