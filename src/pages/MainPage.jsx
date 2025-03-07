@@ -54,7 +54,8 @@ function MainPage({ showMainPageOnly }) {
     <>
       {showMainPageOnly && <MainMenu />}
       <div className="main-page-container">
-        <div className="mainPage-logo-container" onClick={() => window.location.href = "/"}>
+        <div className="mainPage-logo-container" onClick={() => window.location.href = import.meta.env.BASE_URL}
+        >
           <img className="icon-mainPage" src={EG_Logo} alt="EG logo" />
         </div>
         <div className={`anim-EG-container ${isEGAnimationDone ? "hover-enabled" : ""}`}>
