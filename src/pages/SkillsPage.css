@@ -1,23 +1,23 @@
 .skills-page {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
-    grid-template-rows: auto; /* Automatically adjusts row height */
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: auto; 
     gap: 7em;
     padding: 4.5em 1.5em;
     justify-content: center;
     background-color: white;
 
-    justify-content: center; /* Centers the grid horizontally */
-    align-items: center; /* Centers the grid vertically */
-    width: fit-content; /* Makes sure the grid is centered */
-    margin: 0 auto; /* Centers it properly */
+    justify-content: center; 
+    align-items: center; 
+    width: fit-content; 
+    margin: 0 auto; 
 }
 
 #main-page {
     background-color: white;
 }
 
-/* Styling for the skill cards */
+
 .skill-container {
     display: flex;
     flex-direction: column;
@@ -35,30 +35,30 @@
     position: relative;
 }
 
-/* Image inside the card */
+
 .skill-container img {
     width: 50px;
     height: 50px;
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Initially hide the text */
+
 .skill-container .skill-text {
     display: none;
     font-size: 1.2em;
     font-weight: bold;
-    color: white; /* White text when hovered */
+    color: white; 
     text-align: center;
 }
 
-/* Hover Effect */
+
 .skill-container:hover {
-    background: #3498db; /* Light blue */
+    background: #3498db; 
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 51, 102, 0.2);
 }
 
-/* Show text, hide image when hovered */
+
 .skill-container:hover img {
     display: none;
 }
@@ -67,16 +67,32 @@
     display: block;
 }
 
-/* Responsive for Mobile - Stacks into 2 columns on smaller screens */
+
 @media (max-width: 900px) {
     .skills-page {
-        grid-template-columns: repeat(2, 1fr); /* 2 per row */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
-/* Mobile: Stack into 1 column */
-@media (max-width: 600px) {
+
+@media (max-width: 450px) {
     .skills-page {
-        grid-template-columns: repeat(1, 1fr); /* 1 per row */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1.5em;
+        justify-content: center;
+    }
+
+    .skill-container {
+        width: 28vw; 
+        height: 16vh; 
+
+    }
+
+   
+    .skills-page .skill-container:nth-child(odd):last-child {
+        grid-column: span 2; 
+        justify-self: center; 
     }
 }
+
