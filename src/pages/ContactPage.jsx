@@ -1,6 +1,7 @@
 import './ContactPage.css'
 
 function ContactPage () {
+    const resumeUrl = `${import.meta.env.BASE_URL}CV.pdf`;
 
     return(
         <>
@@ -28,7 +29,7 @@ function ContactPage () {
                         </div>
 
                         <div className="resume-container">
-                                <p>📄 <a href="/Portfolio_Website/CV.pdf" download="Elias_Gaghlasian_Resume.pdf">My Resume</a></p>
+                <p>📄 <a href={resumeUrl} download="Elias_Gaghlasian_Resume.pdf">My Resume</a></p>
                         </div>
 
                 </div>

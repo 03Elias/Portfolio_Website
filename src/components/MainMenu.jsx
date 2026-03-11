@@ -1,10 +1,12 @@
 import './MainMenu.css';
 function MainMenu() {
+    const baseUrl = import.meta.env.BASE_URL;
+
     return (
       <>
         <nav className="menu-container">
           <ul>
-            <li><a href="javascript:void(0);" onClick={() => window.location.href = "/Portfolio_Website/"}>Home</a></li>
+            <li><a href="javascript:void(0);" onClick={() => window.location.href = baseUrl}>Home</a></li>
             <li><a href="javascript:void(0);" onClick={() => window.scrollTo({ top: document.getElementById('main-page').offsetTop, behavior: 'smooth' })}>About</a></li>
             <li><a href="javascript:void(0);" onClick={() => window.scrollTo({ top: document.getElementById('project-page').offsetTop, behavior: 'smooth' })}>Projects</a></li>
             <li><a href="javascript:void(0);" onClick={() => window.scrollTo({ top: document.getElementById('skills-page').offsetTop, behavior: 'smooth' })}>Skills</a></li>
